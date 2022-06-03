@@ -1,0 +1,10 @@
+.home{
+    position: relative;
+    display: grid;
+    grid-template-columns: 18rem auto 20rem;
+    gap : 100 rem;
+}
+
+.profileName>span:nth-of-type(1){
+    font-weight: bold ;
+}
