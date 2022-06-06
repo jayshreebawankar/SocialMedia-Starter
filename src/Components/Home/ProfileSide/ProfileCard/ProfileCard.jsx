@@ -19,6 +19,7 @@ const  ProfileCard = () => {
         </div>
 
         <hr/>
+
         <div className='follow-status'>
            
             <div className='follow'> 
@@ -48,7 +49,9 @@ const  ProfileCard = () => {
         </div>
         <hr/>
 
-        {ProfilePage?'':<span>My Profile</span>}
+        {/* {ProfilePage ?'':<span>My Profile</span>} */}
+        <span>My Profile</span>
+
     </div>
   )
 }

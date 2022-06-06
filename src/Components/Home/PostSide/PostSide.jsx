@@ -10,4 +10,4 @@ const PostSide = () => {
     </div>
   )
 } 
-export default PostSide
+export default PostSide;
