@@ -1,8 +1,11 @@
-import CoverImg from '../../../img/cover.jpg';
-import ProfileImg from '../../../img/profileImg.jpg';       
+import CoverImg from '../../../../img/cover.jpg';
+import ProfileImg from '../../../../img/profileImg.jpg';       
 import './ProfileCard.css';    
 
 const  ProfileCard = () => {
+
+  var ProfilePage = true;
+
   return (
     <div className='ProfileCard'>
         <div className='ProfileImage'>
@@ -16,6 +19,7 @@ const  ProfileCard = () => {
         </div>
 
         <hr/>
+
         <div className='follow-status'>
            
             <div className='follow'> 
@@ -28,14 +32,26 @@ const  ProfileCard = () => {
             <div className='follow'>
               <span>9342</span>
               <span>Followers</span>
-            </div>       
+            </div>   
+
+            {ProfilePage && (
+              <>
+                <span className='vl'>
+                </span>
+
+                <div className='follow'>
+                  <span>3</span>
+                  <span>Posts</span>
+                </div>
+              </>
+            )}    
         
         </div>
         <hr/>
 
-        <span>
-          My Profile
-        </span>
+        {/* {ProfilePage ?'':<span>My Profile</span>} */}
+        <span>My Profile</span>
+
     </div>
   )
 }

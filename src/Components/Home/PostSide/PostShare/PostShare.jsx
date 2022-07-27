@@ -1,28 +1,27 @@
 import {useState, useRef} from 'react';
-import './PostShare.css';
-import ProfileImg from '../../../img/profileImg.jpg';
+import ProfileImg from '../../../../img/profileImg.jpg';
 import {UilScenery} from '@iconscout/react-unicons';
 import {UilPlayCircle} from '@iconscout/react-unicons';
 import {UilLocationPoint} from '@iconscout/react-unicons';
 import {UilSchedule} from '@iconscout/react-unicons';
 import {UilTimes} from '@iconscout/react-unicons';
+import './PostShare.css';
 
 const PostShare = () => {
-  const [image, setImage] = useState();
+  const [image, setImage] = useState(null);
   const imageRef = useRef();
 
   const onImageChange =(event)=>{
-    if(event.target.file && event.target.file[0]){
+    if(event.target.files && event.target.files[0]){
       let img = event.target.files[0];
       setImage({
         image : URL.createObjectURL(img),
-       });
+      });
     } 
   };
 
   return (
     <div className='PostShare'>
-      
       <img src={ProfileImg} alt='ProfileImg' className='ProfileImg'/>
       
       <div>
@@ -49,11 +48,14 @@ const PostShare = () => {
             Share
           </button>
 
-          {/* <div style={{display:'none'}}> */}
-          <div>
-            <input type='file' name='myImage' ref={imageRef} onChange={onImageChange}/>  
-          </div>
-        </div>
+          <div style={{display:'none'}}>
+            <input type='file' 
+                   name='myImage'
+                   ref={imageRef}
+                   onChange={onImageChange}
+            />  
+          </div> 
+        </div> 
 
         {image && (
           <div className='previewImg'>

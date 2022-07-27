@@ -1,0 +1,23 @@
+.statusorm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 15rem;
+}
+
+.statusForm-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.update-button{
+    height: 2rem;
+    width: 7rem;
+    /* justify-content: center;
+    align-self: flex-end; */
+}
